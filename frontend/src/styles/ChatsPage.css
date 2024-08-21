@@ -1,17 +1,25 @@
 /* src/styles/ChatsPage.css */
 .chats-page {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(40, 43, 54); /* Background color */
-  }
-  
-  .logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 60px; /* Adjust the size as needed */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 1000; /* Ensure the logo is above other content */
-  }
-  
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(40, 43, 54); /* Background color */
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1000; /* Ensure the logo is above other content */
+}
+
+svg {
+  width: 1.5rem;
+  height: 100%;
+}
+
+.ce-custom-header-title {
+    font-size: 1rem !important;
+}
