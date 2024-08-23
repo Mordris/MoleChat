@@ -4,8 +4,9 @@ import axios from "axios";
 import Loading from "../components/Loading";
 import AuthForm from "../components/AuthForm";
 import FormToggle from "../components/FormToggle";
-import logo from "../assets/logo.png"; // Adjust the path based on your folder structure
-import "../styles/AuthPage.css";
+import logo from "../assets/logo.png";
+import "../styles/authPage.css";
+import "../styles/background.css";
 
 const AuthPage = (props) => {
   const [username, setUsername] = useState("");
@@ -14,7 +15,7 @@ const AuthPage = (props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [loading, setLoading] = useState(false);
-  const [isLogin, setIsLogin] = useState(true); // State to toggle between login and signup
+  const [isLogin, setIsLogin] = useState(true);
 
   const onLogin = (e) => {
     e.preventDefault();
@@ -53,31 +54,53 @@ const AuthPage = (props) => {
   };
 
   return (
-    <div className="auth-page">
-      <div className="auth-card">
-        {!loading && <img src={logo} alt="Logo" className="card-logo" />}
-        {loading ? (
-          <Loading />
-        ) : (
-          <>
-            <FormToggle isLogin={isLogin} setIsLogin={setIsLogin} />
-            <AuthForm
-              isLogin={isLogin}
-              username={username}
-              setUsername={setUsername}
-              secret={secret}
-              setSecret={setSecret}
-              email={email}
-              setEmail={setEmail}
-              firstName={firstName}
-              setFirstName={setFirstName}
-              lastName={lastName}
-              setLastName={setLastName}
-              onLogin={onLogin}
-              onSignup={onSignup}
-            />
-          </>
-        )}
+    <div className="background">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div className="auth-page">
+        <div className="auth-card">
+          {!loading && <img src={logo} alt="Logo" className="card-logo" />}
+          {loading ? (
+            <Loading />
+          ) : (
+            <>
+              <FormToggle isLogin={isLogin} setIsLogin={setIsLogin} />
+              <AuthForm
+                isLogin={isLogin}
+                username={username}
+                setUsername={setUsername}
+                secret={secret}
+                setSecret={setSecret}
+                email={email}
+                setEmail={setEmail}
+                firstName={firstName}
+                setFirstName={setFirstName}
+                lastName={lastName}
+                setLastName={setLastName}
+                onLogin={onLogin}
+                onSignup={onSignup}
+              />
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
