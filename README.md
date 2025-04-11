@@ -131,5 +131,4 @@ You need to run both the backend and frontend servers concurrently.
 Now you can access MoleChat in your browser, sign up for a new account, or log in with existing credentials!
 
 ---
-
 Feel free to contribute or report issues!
